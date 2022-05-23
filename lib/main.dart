@@ -6,7 +6,7 @@ void main() {
 }
 
 class App extends StatelessWidget {
-  const App({Key? key}) : super(key: key);
+  const App({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +15,7 @@ class App extends StatelessWidget {
 }
 
 class MainScreen extends StatelessWidget {
-  const MainScreen({Key? key}) : super(key: key);
+  const MainScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -26,16 +26,16 @@ class MainScreen extends StatelessWidget {
       body: Column(
         children: const [
           ColorWidget(
-            MyColor.red,
             key: Key('Red'),
+            MyColor.red,
           ),
           ColorWidget(
-            MyColor.green,
             key: Key('Green'),
+            MyColor.green,
           ),
           ColorWidget(
-            MyColor.blue,
             key: Key('Blue'),
+            MyColor.blue,
           ),
         ],
       ),
@@ -46,16 +46,16 @@ class MainScreen extends StatelessWidget {
 class ColorWidget extends StatelessWidget {
   final MyColor color;
 
-  const ColorWidget(this.color, {Key? key}) : super(key: key);
+  const ColorWidget(this.color, {super.key});
 
   @override
   Widget build(BuildContext context) {
     return Expanded(
       child: Container(
-        color: color.getMaterialColor(),
+        color: color.materialColor,
         child: Center(
           child: Text(
-            color.getName(),
+            color.name,
             style: const TextStyle(
               color: Colors.white,
               fontWeight: FontWeight.bold,

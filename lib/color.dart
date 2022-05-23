@@ -1,31 +1,12 @@
 import 'package:flutter/material.dart';
 
 enum MyColor {
-  red,
-  green,
-  blue,
-}
+  red('red', Colors.red),
+  green('green', Colors.green),
+  blue('blue', Colors.blue);
 
-extension MyColorExtension on MyColor {
-  String getName() {
-    switch (this) {
-      case MyColor.red:
-        return 'Red';
-      case MyColor.green:
-        return 'Green';
-      case MyColor.blue:
-        return 'Blue';
-    }
-  }
+  final String name;
+  final MaterialColor materialColor;
 
-  MaterialColor getMaterialColor() {
-    switch (this) {
-      case MyColor.red:
-        return Colors.red;
-      case MyColor.green:
-        return Colors.green;
-      case MyColor.blue:
-        return Colors.blue;
-    }
-  }
+  const MyColor(this.name, this.materialColor);
 }
