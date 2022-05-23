@@ -25,9 +25,9 @@ class MainScreen extends StatelessWidget {
       ),
       body: Column(
         children: const [
-          ColorWidget(color: MyColor.red),
-          ColorWidget(color: MyColor.green),
-          ColorWidget(color: MyColor.blue),
+          ColorWidget(MyColor.red),
+          ColorWidget(MyColor.green),
+          ColorWidget(MyColor.blue),
         ],
       ),
     );
@@ -37,7 +37,7 @@ class MainScreen extends StatelessWidget {
 class ColorWidget extends StatelessWidget {
   final MyColor color;
 
-  const ColorWidget({Key? key, required this.color}) : super(key: key);
+  const ColorWidget(this.color, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
