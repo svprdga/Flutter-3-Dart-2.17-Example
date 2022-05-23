@@ -25,9 +25,18 @@ class MainScreen extends StatelessWidget {
       ),
       body: Column(
         children: const [
-          ColorWidget(MyColor.red),
-          ColorWidget(MyColor.green),
-          ColorWidget(MyColor.blue),
+          ColorWidget(
+            MyColor.red,
+            key: Key('Red'),
+          ),
+          ColorWidget(
+            MyColor.green,
+            key: Key('Green'),
+          ),
+          ColorWidget(
+            MyColor.blue,
+            key: Key('Blue'),
+          ),
         ],
       ),
     );
